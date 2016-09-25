@@ -17,11 +17,11 @@ Footer.propTypes = {
 Footer.defaultProps = {
   footerlist: [
     {
-      linkTo: 'http://google.com',
-      title: 'Google'
+      linkTo: 'http://twitter.com',
+      title: 'Twitter'
     }, {
-      linkTo: 'http://yahoo.com',
-      title: 'Yahoo'
+      linkTo: 'http://facebook.com',
+      title: 'Facebook'
     },
   ]
 };

@@ -8,22 +8,19 @@ import './style.less';
 
 class Component extends React.Component {
 
-  dropped(compName) {
-    return components[compName];
-  }
-
   render() {
     return (
       <div className="editor">
         <div className="leftpane">
-          <LayoutEditor>
-            <Droppable dropped={this.dropped} />
-          </LayoutEditor>
+          <h3>Components</h3>
+          <ul>
+            {Object.keys(components).map((comp, index) =>
+              <li key={index}><Draggable elem={comp} /></li>
+            )}
+          </ul>
         </div>
         <div className="rightpane">
-          {Object.keys(components).map((comp, index) =>
-            <Draggable key={index} elem={comp} />
-          )}
+          <LayoutEditor childList={components} defaultChild={Droppable} />
         </div>
       </div>
     );
