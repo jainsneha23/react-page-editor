@@ -1,0 +1,48 @@
+.section {
+  min-height: 40px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: table;
+  width: 100%;
+  .col {
+    display: table-cell;
+    box-sizing: border-box;
+    border: 1px dashed #888;
+    min-height: 40px;
+    vertical-align: top;
+    > span {
+      display: inline-block;
+      padding: 5px;
+      color: #888;
+    }
+    &.col-12 {
+      width: 100%;
+    }
+    &.col-8 {
+      width: 66.6%;
+    }
+    &.col-6 {
+      width: 50%;
+    }
+    &.col-4 {
+      width: 33.3%;
+    }
+    &.col-3 {
+      width: 25%;
+    }
+    &.dropped {
+      border: 1px solid transparent;
+    }
+  }
+  &.active {
+    .active;
+    .col {
+      .active;
+    }
+  }
+}
+
+.active {
+  border: 1px solid #888;
+  box-shadow: 0 0 5px 0 #ccc;
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import LayoutEditor from '../../react-layout-editor/src/';
-import {Draggable, Droppable} from '../../react-dragdrop/src/';
-import * as components from '../components';
+import LayoutEditor from './layout-editor';
+import {Draggable, Droppable} from './drag-drop';
+import * as components from './components';
 
 import './style.less';
 import 'reset-css/reset.less';
