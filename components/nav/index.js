@@ -1,7 +1,8 @@
 import React from 'react';
+import './index.less';
 
 const Navigation = (props) => (
-  <nav>
+  <nav className="navigation">
     <ul>
     {props.navlist.map((item, index) =>
       <li key={index}><a href={item.linkTo}>{item.title}</a></li>

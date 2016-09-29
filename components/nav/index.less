@@ -1,0 +1,23 @@
+.navigation {
+  ul{
+    background: #03A9F4;
+    li {
+      display: inline-block;
+      padding: 12px 16px;
+      cursor: pointer;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      &+li {
+        border-left: 1px solid #fff;
+      }
+      &:hover {
+        background: #fff;
+        a {
+          color: #03A9F4;
+        }
+      }
+    }
+  }
+}

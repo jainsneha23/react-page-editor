@@ -5,6 +5,7 @@ import {Draggable, Droppable} from '../../react-dragdrop/src/';
 import * as components from '../components';
 
 import './style.less';
+import 'reset-css/reset.less';
 
 class Component extends React.Component {
 

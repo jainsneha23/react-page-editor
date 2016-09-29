@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.less';
 
 const Banner = (props) => (
   <div className="banner">
@@ -12,8 +13,8 @@ Banner.propTypes = {
 };
 
 Banner.defaultProps = {
-  imgsrc: 'http://www.johnstonefitness.com/wp-content/uploads/2011/07/hot-summer-deals-300x208.jpg',
-  alt: 'Summer Deals'
+  imgsrc: 'https://s-media-cache-ak0.pinimg.com/originals/dd/d1/6a/ddd16a2ac7aed2256bb771d3a72bc8e2.jpg',
+  alt: 'Best banner design for you guarented'
 };
 
 

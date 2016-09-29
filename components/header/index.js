@@ -1,7 +1,8 @@
 import React from 'react';
+import './index.less';
 
 const Header = (props) => (
-  <header>
+  <header className="header">
     <img src={props.logosrc} alt={props.logoalt} />
     <span>
       <h1>{props.title}</h1>
@@ -18,10 +19,10 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  logosrc: '',
+  logosrc: 'http://carve.ph/wp-content/uploads/2014/12/Google-Web-Design.png',
   logoalt: 'Logo',
   title: 'Site Title',
-  subtitle: 'Subtitle goes here'
+  subtitle: 'Sub Title goes here'
 };
 
 export default Header;

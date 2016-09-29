@@ -1,7 +1,8 @@
 import React from 'react';
+import './index.less';
 
 const Copyright = (props) => (
-  <div>
+  <div className="copyright">
     <p className="copyright-content">{props.text}</p>
   </div>
 );
