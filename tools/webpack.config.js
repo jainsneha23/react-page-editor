@@ -16,7 +16,8 @@ export default {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './src'
+    contentBase: './src',
+    stats: 'errors-only'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -25,7 +26,7 @@ export default {
   module: {
     loaders: [
       {test: /\.jsx?$/, loaders: ['babel']},
-      {test: /(\.css)$/, loaders: ['style', 'css']},
+      {test: /(\.css)$/, loaders: 'style!css'},
       {test: /\.less$/, loader: 'style!css!less'},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},

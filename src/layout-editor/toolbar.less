@@ -26,8 +26,18 @@
       border: 1px solid transparent;
       box-sizing: border-box;
       span {
-        padding-right: 5px;
         vertical-align: middle;
+        &.edit-icon {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          opacity: 0.5;
+          background-size: cover;
+          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADHElEQVR4Xu2bTahOQRiAnytbis1FUiRX7CSxEjZCtlYSCytbWdha2VpZKVKys7IhRKwRkpINRX6KSOSnV3PqdNw5886cOfPzfffU3dzOOTPPc9555z1n5pthyo+ZKednQcBCBEyGAYnkPyEotQ+B9cAlYBtwDzgOPPcRUbOADcAtYFUL+B2wC3iqlVCrgPngG2YvCTUK6IP3llCbAA28l4SaBPjAqyXUJOABsF2b3LSJsSYB60zWXxNTQukCJOxngbsGOrqEkgUI/G1gKbAfuDOGhFIFNPArDfTXiBLeAluAN3LvEgV04ZshH1PCWeBUiQJs8I2Eb8C+CMPhAnCsNAEu+FgSfpn3hX+JtZQhoIVvS5DEKElSDu3s8Bs4ClxsblSCgDkzvzcJTzvNy3DwkfAffAkREArvGwnzwucWMBReK8EKn1NALPi2hANmKLVzwurumO+Orxw5IDZ8n4StwNW+pJJawFjwNgnOhJpSwNjwDewXMy2+d9InrANSwUuRcwS4rIFPlQSLhU8hQOClWluhfSKB53k/+RSVYPHwY0ZAFfBjCagGfgwBVcHHFlAdfEwBG00dXmy2t80uMSrBauFjREDV8EMFVA8/RMBEwIcKmBj4EAETBe8rYOLgfQQsAh4DmwLf1rSXBb/VaRsY8k1QFhRvAMtCG3NclxxeEwGLgc3AQ9P5sSRkgdcIkJCXNbTdI0rIBq8RcAi4AnwcSUJWeI2AM8BpE/6xJWSH1wi4BhxsJa8PwJ4Iw6EIeI2Al8DaTvYeKqEYeJeAJcBny9QVKqEoeJeAHcD9nrnbV0Jx8C4Bsvf+vKN4EQkyRT5y1AlFwrsEnANOKKo+l4Ri4V0CZEVnp0KAnGKTIJscvdbqlO1FO832TVD+L6uryz1akvNlimwPB9n8JIVUsYdNgPwM5XVAr7sSAm6R9hKbgL3A9YCufAJuAoeB7wHXJ7/EJuAkINtJbccP4JkJd/lO0PzJ/tugn68lJzcN2gTIRkJ5inK8MoAythvQF8DPXJ2O2a5NgOzHlXB+0lMNxuxHtnvFWBnK1vkYDU+9gL/5rvBB09+btQAAAABJRU5ErkJggg==');
+        }
+        &:last-child {
+          padding-left: 5px;
+        }
       }
       &:active {
         box-shadow: inset 0 0 5px 1px #ccc;
@@ -38,6 +48,9 @@
       &.disabled {
         cursor: default;
         color: #ccc;
+        span.edit-icon {
+          opacity: 0.3;
+        }
         &:hover, &:active {
           box-shadow: none;
         }
@@ -49,10 +62,10 @@
         height: 30px;
         width: 40px;
         vertical-align: middle;
-        &.disabled {
-          span {
-            background: #ccc;
-          }
+      }
+      &.disabled {
+        span {
+          background: #ccc;
         }
       }
       span{
@@ -98,6 +111,21 @@
         }
         span:last-child{
           width: 25%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:  755px) {
+  .toolbar {
+    ul.icons {
+      li {
+        span:first-child {
+          font-size: 18px;
+        }
+        span:last-child {
+          display: none;
         }
       }
     }

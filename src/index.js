@@ -1,3 +1,3 @@
-import Component from './component';
+import PageEditor from './page-editor';
 
-export default Component;
+export default PageEditor;
